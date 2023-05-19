@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="Calc.css">
-   <title>Calulator</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LGM Task4: Simple Calculator</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div class="main">
-      <input type="text" id = 'res'>
-      <div class="btn">
-         <input type="button" value = 'C' onclick = "Clear()">
-         <input type="button" value = '%' onclick = "Solve('%')">
-         <input type="button" value = '←' onclick ="Back('←')">
-         <input type="button" value = '/' onclick = "Solve('/')">
-         <br>
-         <input type="button" value = '7' onclick = "Solve('7')">
-         <input type="button" value = '8' onclick = "Solve('8')">
-         <input type="button" value = '9' onclick = "Solve('9')">
-         <input type="button" value = 'x' onclick = "Solve('*')">
-         <br>
-         <input type="button" value = '4' onclick = "Solve('4')">
-         <input type="button" value = '5' onclick = "Solve('5')">
-         <input type="button" value = '6' onclick = "Solve('6')">
-         <input type="button" value = '-' onclick = "Solve('-')">
-         <br>
-         <input type="button" value = '1' onclick = "Solve('1')">
-         <input type="button" value = '2' onclick = "Solve('2')">
-         <input type="button" value = '3' onclick = "Solve('3')">
-         <input type="button" value = '+' onclick = "Solve('+')">
-         <br>
-         <input type="button" value = '00'onclick = "Solve('00')">
-         <input type="button" value = '0' onclick = "Solve('0')">
-         <input type="button" value = '.' onclick = "Solve('.')">
-         <input type="button" value = '=' onclick = "Result()">
-      </div>
-   </div>
-   <script src = 'Calc.js' ></script>
+	<table class="calculator">
+		<tr>
+			<td colspan="3"> <input class="display-box" type="text" id="result" disabled ></td>
+			
+			<td> <input type="button" value="C" onclick="clearScreen()" id="btn"></td>
+		</tr>
+        <tr>
+        	<td> <input type="button" value="1" onclick="display('1')"></td>
+        	<td> <input type="button" value="2" onclick="display('2')"></td>
+        	<td> <input type="button" value="3" onclick="display('3')"></td>
+        	<td> <input type="button" value="/" onclick="display('/')"></td>
+        </tr>
+        <tr>
+        	<td> <input type="button" value="4" onclick="display('4')"></td>
+        	<td> <input type="button" value="5" onclick="display('5')"></td>
+        	<td> <input type="button" value="6" onclick="display('6')"></td>
+        	<td> <input type="button" value="-" onclick="display('-')"></td>
+        </tr>
+         <tr>
+        	<td> <input type="button" value="7" onclick="display('7')"></td>
+        	<td> <input type="button" value="8" onclick="display('8')"></td>
+        	<td> <input type="button" value="9" onclick="display('9')"></td>
+        	<td> <input type="button" value="+" onclick="display('+')"></td>
+        </tr>
+         <tr>
+        	<td> <input type="button" value="." onclick="display('.')"></td>
+        	<td> <input type="button" value="0" onclick="display('0')"></td>
+        	<td> <input type="button" value="=" onclick="calculate()" id="btn"></td>
+        	<td> <input type="button" value="*" onclick="display('*')"></td>
+        </tr>
+	</table>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
